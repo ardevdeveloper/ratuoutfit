@@ -75,7 +75,7 @@
                             <div class="col-md-12">
                                 <a href="{{ url('/auth/facebook') }}" class="btn btn-primary"><i
                                         class="fa fa-facebook"></i> Login With Facebook</a>
-                                <a href="{{ url('/auth/google') }}" class="btn btn-primary"><i class="fa fa-google"></i>
+                                <a href="{{ url('/auth/google') }}" class="btn btn-danger"><i class="fa fa-google"></i>
                                     Login With Google</a>
                             </div>
                         </div>

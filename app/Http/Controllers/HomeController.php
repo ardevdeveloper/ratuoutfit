@@ -31,7 +31,7 @@ class HomeController extends Controller
         $data_product = $product->get();
         // dd($data_product);
 
-        return view('home', compact('data_product'));
+        return view('upage.index', compact('data_product'));
     }
 
     public function detail($slug)
@@ -44,6 +44,6 @@ class HomeController extends Controller
 
         // dd($size);
 
-        return view('detail', compact(['size', 'colour', 'category', 'product', 'picture']));
+        return view('upage.detail', compact(['size', 'colour', 'category', 'product', 'picture']));
     }
 }

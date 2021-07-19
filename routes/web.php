@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\SocialiteController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 Route::get('auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
 Route::get('auth/{provider}/callback', [SocialiteController::class, 'handleProviderCallback']);

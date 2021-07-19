@@ -5,12 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Colour extends Model
+class Picture extends Model
 {
     use HasFactory;
-
-    public function productEntries()
-    {
-        return $this->belongsToMany(ProductEntry::class, 'colour_id');
-    }
+    protected $table = 'pictures';
+    protected $fillable = ['product_slug', 'picture_name'];
 }

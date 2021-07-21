@@ -2,6 +2,7 @@
 <html lang="en">
 
 <!-- Mirrored from themes.pixelstrap.com/bigdeal/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jul 2021 11:46:55 GMT -->
+
 <head>
   <title>Bigdeal - Multi-purpopse E-commerce Html Template</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,56 +35,58 @@
   <!-- Theme css -->
   <link rel="stylesheet" type="text/css" href="{{ asset('vendor/themes') }}/css/color2.css" media="screen" id="color">
 </head>
+
 <body class="bg-light">
-@include('master.nav')
-<!-- loader start -->
-<div class="loader-wrapper">
+  @include('master.nav')
+  <!-- loader start -->
+  <div class="loader-wrapper">
     <div>
       <img src="{{ asset('vendor/themes') }}/images/loader.gif" alt="loader">
     </div>
   </div>
   <!-- loader end -->
-@yield('master-page')
+  @yield('master-page')
 
-<script src="https://use.fontawesome.com/bb34672705.js"></script>
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
-<!-- latest jquery-->
-<script src="{{ asset('vendor/themes') }}/js/jquery-3.3.1.min.js"></script>
 
-<!-- slick js-->
-<script src="{{ asset('vendor/themes') }}/js/slick.js"></script>
+  <script src="https://use.fontawesome.com/bb34672705.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" type="text/javascript"></script>
+  <!-- latest jquery-->
+  <script src="{{ asset('vendor/themes') }}/js/jquery-3.3.1.min.js"></script>
 
-<!-- popper js-->
-<script src="{{ asset('vendor/themes') }}/js/popper.min.js" ></script>
-<script src="{{ asset('vendor/themes') }}/js/bootstrap-notify.min.js"></script>
+  <!-- slick js-->
+  <script src="{{ asset('vendor/themes') }}/js/slick.js"></script>
 
-<!-- menu js-->
-<script src="{{ asset('vendor/themes') }}/js/menu.js"></script>
+  <!-- popper js-->
+  <script src="{{ asset('vendor/themes') }}/js/popper.min.js"></script>
+  <script src="{{ asset('vendor/themes') }}/js/bootstrap-notify.min.js"></script>
 
-<!-- timer js -->
-<script src="{{ asset('vendor/themes') }}/js/timer2.js"></script>
+  <!-- menu js-->
+  <script src="{{ asset('vendor/themes') }}/js/menu.js"></script>
 
-<!-- Bootstrap js-->
-<script src="{{ asset('vendor/themes') }}/js/bootstrap.js"></script>
+  <!-- timer js -->
+  <script src="{{ asset('vendor/themes') }}/js/timer2.js"></script>
 
-<!-- tool tip js -->
-<script src="{{ asset('vendor/themes') }}/js/tippy-popper.min.js"></script>
-<script src="{{ asset('vendor/themes') }}/js/tippy-bundle.iife.min.js"></script>
+  <!-- Bootstrap js-->
+  <script src="{{ asset('vendor/themes') }}/js/bootstrap.js"></script>
 
-<!-- father icon -->
-<script src="{{ asset('vendor/themes') }}/js/feather.min.js"></script>
-<script src="{{ asset('vendor/themes') }}/js/feather-icon.js"></script>
+  <!-- tool tip js -->
+  <script src="{{ asset('vendor/themes') }}/js/tippy-popper.min.js"></script>
+  <script src="{{ asset('vendor/themes') }}/js/tippy-bundle.iife.min.js"></script>
 
-<!-- Theme js-->
-<script src="{{ asset('vendor/themes') }}/js/modal.js"></script>
-<script src="{{ asset('vendor/themes') }}/js/script.js"></script>
-<script>
+  <!-- father icon -->
+  <script src="{{ asset('vendor/themes') }}/js/feather.min.js"></script>
+  <script src="{{ asset('vendor/themes') }}/js/feather-icon.js"></script>
+
+  <!-- Theme js-->
+  <script src="{{ asset('vendor/themes') }}/js/modal.js"></script>
+  <script src="{{ asset('vendor/themes') }}/js/script.js"></script>
+  <script>
     $(document).ready(function() {
         $('.color-picker').hide()
     })
-</script>
+  </script>
 </body>
 
 <!-- Mirrored from themes.pixelstrap.com/bigdeal/html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jul 2021 11:46:55 GMT -->
+
 </html>

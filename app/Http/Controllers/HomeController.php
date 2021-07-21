@@ -46,4 +46,9 @@ class HomeController extends Controller
 
         return view('upage.detail', compact(['size', 'colour', 'category', 'product', 'picture']));
     }
+
+    public function getData()
+    {
+        return view();
+    }
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Product;
 use App\Models\ProductEntry;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -29,9 +30,9 @@ class HomeController extends Controller
     {
         $detail_product = $productEntry->with(['product', 'size', 'colour', 'category']);
         $data_product = $product->get();
-        // dd($data_product);
+        $rating = $product;
 
-        return view('upage.index', compact('data_product'));
+        return view('upage.index', compact(['data_product', 'rating']));
     }
 
     public function detail($slug)
@@ -41,10 +42,11 @@ class HomeController extends Controller
         $category = ProductEntry::with(['category'])->where('product_slug', $slug)->groupBy('category_id')->get();
         $product = Product::where('slug', $slug)->first();
         $picture = Picture::where('product_slug', $slug)->get();
+        $rating = $product;
 
-        // dd($size);
+        // dd($colour);
 
-        return view('upage.detail', compact(['size', 'colour', 'category', 'product', 'picture']));
+        return view('upage.detail', compact(['size', 'colour', 'category', 'product', 'picture', 'rating']));
     }
 
     public function getData()

@@ -19,12 +19,18 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/cart', function () {
+    return view('upage.cart');
+});
+Route::get('/checkout', function () {
+    return view('upage.checkout');
+});
 
 Route::get('/', [HomeController::class, 'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/detail/{slug}', [HomeController::class, 'detail'])->name('detail');
 
 Route::get('auth/{provider}', [SocialiteController::class, 'redirectToProvider']);

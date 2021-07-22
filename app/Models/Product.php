@@ -25,4 +25,14 @@ class Product extends Model
     {
         return DB::table('products')->join('product_entries', 'product_entries.product_slug', '=', 'products.slug')->join('colours', 'product_entries.colour_id', '=', 'colours.id')->where('slug', $slug)->get();
     }
+
+    public function rating($id)
+    {
+        return DB::table('ratings')->where('product_id', $id)->average('value_rating');
+    }
+
+    public function countReview($id)
+    {
+        return DB::table('ratings')->where('product_id', $id)->count();
+    }
 }
